@@ -23,7 +23,7 @@ plot_compare_stage(nc_file,field_stage, main="dots = observed") # observed vs. s
 field_file <- file.path(sim_folder, 'FCR_2015_CTD_wtr.csv') # Define the observed field data
 plot_temp_compare(nc_file, field_file) # Plot your GLM simulated data vs. the observed data 
 
-# Nicole's unit conversion script ####
+# OPTIONAL PART 2: Nicole's unit conversion script ####
 ## Note that not all Sunapee output vars are included in current FCR runs ##
 ## Those variables are currently hashed out ##
 
