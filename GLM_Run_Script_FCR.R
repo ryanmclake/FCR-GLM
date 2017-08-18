@@ -20,6 +20,9 @@ var_names <- sim_vars(nc_file)
 field_stage = file.path(sim_folder, 'FCR_stage_observed_022317.csv')
 plot_compare_stage(nc_file,field_stage, main="dots = observed") # observed vs. sim lake stage
 
+field_file <- file.path(sim_folder, 'FCR_2015_CTD_wtr.csv') # Define the observed field data
+plot_temp_compare(nc_file, field_file) # Plot your GLM simulated data vs. the observed data 
+
 # Nicole's unit conversion script ####
 ## Note that not all Sunapee output vars are included in current FCR runs ##
 ## Those variables are currently hashed out ##
