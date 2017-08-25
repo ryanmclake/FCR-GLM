@@ -53,14 +53,16 @@ o_temp <- myTempResampled$Observed_temp[32:1488]
 
 RMSE(m_temp,o_temp)
 
-m_DO <- myDOResampled$Modeled_DO[1:1457]
-o_DO <- myDOResampled$Observed_DO[1:1457]
+myDOResampled <- myDOResampled[complete.cases(myDOResampled), ]
+
+m_DO <- myDOResampled$Modeled_DO
+o_DO <- myDOResampled$Observed_DO
 
 RMSE(m_DO,o_DO)
 
 #run RMSE using glmtools
 #temp
-compare_to_field(nc_file, field_file, nml_file = nml_file, metric = 'thermo.depth', as_value = FALSE,
+compare_to_field(nc_file, field_file, nml_file = nml_file, metric = 'water.temperature', as_value = FALSE,
                  na.rm = TRUE, precision = 'days',method = 'interp')
 
 

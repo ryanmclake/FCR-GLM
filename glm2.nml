@@ -195,7 +195,7 @@
 &output
  out_dir = '.'
  out_fn = 'output'
- nsave = 5
+ nsave = 24
  csv_point_nlevs = 2
  csv_point_fname = 'WQ_'
  csv_point_at = 8,0.3
