@@ -20,3 +20,16 @@ After having tried this outflow at several depths, I don't see substantial chang
 thermocline depth. Personally, if we are going to make the SSS outflow depth a kludge, I support just making it a normal surface outflow for now
 because I think a submerged outflow could cause further challenges in other variables later as well. 
 
+READme for Ryan's Updates to MEL's OG .nml file_083117
+
+1. coef_mix_KH = 0.2      Went from 0.3 to 0.2
+2. coef_mix_hyp = 0.4     Went from 0.5 to 0.4
+
+   3. wind_factor = 0.61   originally set to 0.7
+   4. sw_factor = 0.5      originally set to 0.6
+   5. lw_factor = 1.01     originally set to 1.0
+   
+   Apart from this I have not done ANYTHING ELSE TO THE .nml file. 
+   
+   The current RMSE output for the thermocline depth is 0.88, a small improvement from 1.2
+   
