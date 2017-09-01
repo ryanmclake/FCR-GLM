@@ -26,12 +26,12 @@
    !-- Light Parameters
    Kw = 0.87
    !-- Mixing Parameters
-   coef_mix_conv = 0.2    ! 0.05,0.2 , 0.35 , 0.12
+   coef_mix_conv = 0.2    ! 0.05, 0.2 , 0.35 , 0.12
    coef_wind_stir = 0.23    ! 0.1,0.3, 0.3, 0.1
    coef_mix_shear = 0.2     ! 0.018,0.4, 0.2, 0.13
    coef_mix_turb = 0.51    ! 0.51, 0.51, 0.51, 0.51        
-   coef_mix_KH = 0.3      !0.015, 0.4, 0.18, 0.33 
-   coef_mix_hyp = 0.5      !0.05, 0.6, 0.25, 0.8
+   coef_mix_KH = 0.2      !0.015, 0.4, 0.18, 0.33 0.3 to 0.2
+   coef_mix_hyp = 0.4      !0.05, 0.6, 0.25, 0.8  0.5 to 0.4
 !  non_avg = .true.
 !  deep_mixing = .true.
 /
@@ -83,8 +83,8 @@
    !bioshade_feedback = .true.
    bioshade_feedback = .false.
    repair_state = .true.
-!  mobility_off = .false.
-   multi_ben = .true.
+   !mobility_off = .false.
+   !multi_ben = .true.
 /
 
 !-------------------------------------------------------------------------------
@@ -154,7 +154,6 @@
    start = '2015-03-31 12:00:00'
    stop = '2015-12-07 12:00:00'
    dt = 3600.0
-   !num_days = 3288
    timezone = -5.0
 /
 
@@ -273,7 +272,7 @@
    met_sw     = .true.
    lw_type    = 'LW_IN'
    rain_sw    = .false.
-   snow_sw    = .false.
+   !snow_sw    = .false.
    atm_stab   = .false.
    catchrain   = .false.
    rad_mode    = 2
@@ -282,9 +281,9 @@
    !-- BC file details
    meteo_fl   = 'FCR_met_driver_2015_022217.csv'
    subdaily = .true.
-   wind_factor = 0.7
-   sw_factor = 0.6
-   lw_factor = 1.0
+   wind_factor = 0.61  !0.7
+   sw_factor = 0.5     !0.6
+   lw_factor = 1.01    !1.0
    at_factor = 1.0
    rh_factor = 1.0
    rain_factor = 1.0
